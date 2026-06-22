@@ -401,7 +401,7 @@ document.getElementById('resForm').addEventListener('submit',()=>{
 document.getElementById('burger').addEventListener('click',openRes);
 
 if(!reduce){
-  const lenis=new Lenis({lerp:.09,smoothWheel:true});
+  const lenis=new Lenis({lerp:0.2, wheelMultiplier:1, smoothWheel:true, syncTouch:false});
   function raf(t){lenis.raf(t);requestAnimationFrame(raf);}requestAnimationFrame(raf);
   gsap.registerPlugin(ScrollTrigger);
   lenis.on('scroll',ScrollTrigger.update);
