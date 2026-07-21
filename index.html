@@ -35,6 +35,11 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
+  /* Lenis CSS (nedostajao) — bez ovoga nativni smooth re-animira svaki Lenisov
+     frame i scroll zapinje: scrollTo od 2220px prijeđe samo ~419px */
+  html.lenis{scroll-behavior:auto!important}
+  html.lenis,html.lenis body{height:auto}
+  html.lenis [data-lenis-prevent]{overscroll-behavior:contain}
   body{
     background:var(--ink);color:var(--cream);font-family:var(--disp);
     font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
